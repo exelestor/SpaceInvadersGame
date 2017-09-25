@@ -1,0 +1,75 @@
+#bG {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: none;
+	/*background-color: #eee;*/
+}
+
+.buttons {
+	position: absolute;
+	height: 30px;
+	width: 210px;
+	top: calc(50% - 15px);
+	left: calc(50% - 100px);
+	z-index: 2;
+	text-align: center;
+	color: white;
+}
+
+.colorButton {
+	z-index: 9;
+	width: 30px;
+	height: 30px;
+	border: none;
+	border-radius: 50%;
+	box-shadow: 0 12px 13px rgba(0,0,0,.3);
+	outline: none;
+}
+
+.colorButton:hover {
+	box-shadow: 0 25px 20px rgba(0,0,0,.2);
+	opacity: .7;
+	cursor: pointer;
+}
+
+.colorButton:active {
+	box-shadow: 0 7px 7px rgba(0,0,0,.55);
+	opacity: .9;
+	border-color: rgba(0,0,0,.1);
+}
+
+#redButton {
+	background-color: rgb(255, 50, 50);
+}
+
+#blueButton {
+	background-color: rgb(0, 200, 255);
+}
+
+#greenButton {
+	background-color: rgb(50, 255, 50);
+}
+
+#purpleButton {
+	background-color: rgb(255, 0, 255);
+}
+
+#yellowButton {
+	background-color: rgb(255, 255, 0);
+}
+
+#naviButton {
+	background-color: rgb(50, 50, 255);
+}
+
+.info {
+	position: absolute;
+	width: 500px;
+	height: 50px;
+	top: 50px;
+	left: calc(50% - 250px);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Space Invaders / Alpha version</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/mainscreen.css">
+	<link rel="stylesheet" href="style/game.css">
+	<link rel="stylesheet" href="font/stylesheet.css">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+	<img src="images/alien1/enemy0.png" style="display: none">
+	<img src="images/alien1/enemy1.png" style="display: none">
+	<img src="images/alien1/enemy2.png" style="display: none">
+	<img src="images/alien1/enemy3.png" style="display: none">
+	<img src="images/alien1/enemy4.png" style="display: none">
+	<img src="images/alien1/enemy5.png" style="display: none">
+	<img src="images/alien2/enemy0.png" style="display: none">
+	<img src="images/alien2/enemy1.png" style="display: none">
+	<img src="images/alien2/enemy2.png" style="display: none">
+	<img src="images/alien2/enemy3.png" style="display: none">
+	<img src="images/alien2/enemy4.png" style="display: none">
+	<img src="images/alien2/enemy5.png" style="display: none">
+	<img src="images/alien3/enemy0.png" style="display: none">
+	<img src="images/alien3/enemy1.png" style="display: none">
+	<img src="images/alien3/enemy2.png" style="display: none">
+	<img src="images/alien3/enemy3.png" style="display: none">
+	<img src="images/alien3/enemy4.png" style="display: none">
+	<img src="images/alien3/enemy5.png" style="display: none">	
+
+	<div id="fps" style="color:white; display: none;"></div>
+	
+	<canvas id='starsCanvas' height='620' width='1300'>Текст показывается, если элемент не поддерживается</canvas>
+	<canvas id='canvas' height='620' width='1300'>Текст показывается, если элемент не поддерживается</canvas>
+	
+	<script src="js/game.js"></script>
+	<!-- <script src="js/keyboard.js"></script> -->
+	
+	<div id="bG">
+		<div class="buttons">
+			<button id="redButton" style="display: none" class="colorButton" onclick="start(); color.change(0);"></button>
+			<button id="blueButton" style="display: none" class="colorButton" onclick="start(); color.change(5);"></button>
+			<button id="greenButton" style="width: 100%; border-radius: 1em; text-transform: uppercase; font-weight: 800" class="colorButton" onclick="start(); color.change(1);">Start!</button>
+			<button id="purpleButton" style="display: none" class="colorButton" onclick="start(); color.change(4);"></button>
+			<button id="yellowButton" style="display: none" class="colorButton" onclick="start(); color.change(3);"></button>
+			<button id="naviButton" style="display: none" class="colorButton" onclick="start(); color.change(2);"></button>
+			<p class="info">Press H to show help and settings</p>	
+		</div>
+	</div>
+
+	<div id="score">
+		0
+	</div>
+
+	<div id="gameover">aaaaaaa</div>
+
+	<div id="help">
+	    
+		<p style="display: none">If you're on the main screen<br>press one of circles to start<br></p>
+		
+		<p>Use:</p>
+			<ul><br>
+				<li>WASD/Arrows to move</li>
+				<li>Space to shot</li>
+				<li>C to change color</li>
+				<li>B to pause</li>
+				<li>H to hide help</li><br>
+			</ul>
+		<!-- <input id="autoCH" type="checkbox"> -->
+		<hr><br>
+		
+		<p>Change background color:</p>
+		<button class="colorButton bgChange" style="background-color: #fff;" onclick="body.style.backgroundColor = 'white'"></button>
+		<button class="colorButton bgChange" style="background-color: #112;" onclick="body.style.backgroundColor = '#112'"></button>
+		<button class="colorButton bgChange" style="background-color: #000;" onclick="body.style.backgroundColor = '#000'"></button><br><br>
+
+		<p>Opacity of this block:</p>
+		<input id="opChange" type="range" min="5" max="100" step="1" value="80" oninput="document.getElementById('help').style.opacity = this.value / 100"> 
+		
+		<p>Opacity of units:</p>
+		<input id="opacityUnits" type="range" min="0" max="100" step="1" value="100" oninput="options.unitsOpacity = this.value;"> 	
+		<br><br>
+
+		<div>
+			<input style="width: inherit; vertical-align: middle;" id="flickering" type="checkbox" onclick="color.flickering = this.checked">
+			<p style="display: inline-block;"> Enable flickering</p>
+		</div>
+		
+		<div>
+			<input style="width: inherit; vertical-align: middle;" id="flickering" type="checkbox" disabled onclick="color.valueFlickering = this.checked">
+			<p style="display: inline-block;"> Enable color flickering</p>
+		</div>	
+		
+		<div>
+			<input style="width: inherit; vertical-align: middle;" id="flickering" type="checkbox" onclick="document.getElementById('fps').style.display = this.checked ? 'block' : 'none'">
+			<p style="display: inline-block;"> Show fps</p>
+		</div>			
+	</div>
+</body>
+</html>

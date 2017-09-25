@@ -1,0 +1,32 @@
+#score {
+	user-select: none;
+	display: none;
+	position: fixed;
+	bottom: .2em;
+	width: 3em;
+	font-size: 40px;
+	left: calc(50% - 1.5em);
+	text-align: center;
+	font-family: "8bitoperator JVE Regular";
+	-webkit-font-smoothing: subpixel-antialiased !important;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+}
+
+#gameover {
+	user-select: none;
+	display: none;
+	position: fixed;
+	width: 10em;
+	height: 2em;
+	font-size: 40px;
+	left: calc(50% - 5em);
+	top: calc(50% - 1em);
+	text-align: center;
+	font-family: "8bitoperator JVE Regular";
+	-webkit-font-smoothing: subpixel-antialiased !important;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+}
